@@ -1,0 +1,11 @@
+export FLASK_APP=main.py
+export FLASK_ENV=develpment
+flask run
+------------
+database.py makes dataframe from the input articles (or) updates the existing database of articles by inserting the articles
+files.py makes text files from the dataframe and divides them to folders based on topics ; NOTE : these adress must exist, code is not written to automatically create them ["datasets/", "datasets/Business", "datasets/Sports", "datasets/Entertainment", "datasets/Tech", "datasets/Politics"]
+makecsv.py makes csv from dataframe from which we will later extract the data ; make sure to make ["CSVs/"]
+newsclass.py makes multiple csvs based on categories from which we will extract data later ; make sure to make ["CSVs/"]
+train.py trains your database and will tell you how accurate is your model
+
+##Note; (If you run this flask main.py) then you do not have to run other files; everything will update automatically except train (which will tell you the accuracy of model)
